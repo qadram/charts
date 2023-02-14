@@ -21,6 +21,10 @@
 					var data = jsonfile.jsonarray.map(function (e) {
 						return e.age;
 					});
+					
+					var macos = jsonfile.pas2js.macos.map(function (e) {
+						return e.time;
+					});
 
 					var ctx = canvas.getContext('2d');
 					var config = {
@@ -29,7 +33,7 @@
 							labels: labels,
 							datasets: [{
 								label: 'pas2js - macOS',
-								data: data,
+								data: macos,
 								backgroundColor: 'rgba(0, 119, 204, 0.3)'
 							},
 								  {
