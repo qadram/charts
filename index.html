@@ -17,7 +17,7 @@
 					let systems = ["pas2js", "delphi2ts"];
 					let platforms = ["macos", "windows", "linux"];
 
-					let chartdata = [];
+					let datasets = [];
 
 					var labels = jsonfile.data.map(function (e) {
 						return e.commit;
@@ -40,6 +40,7 @@
 								backgroundColor: 'rgba(0, 119, 204, 0.3)'
 							};
 
+							datasets.push(dataset);
 							console.log('dataset:',dataset);
 						});
 					});
@@ -63,31 +64,16 @@
 					// console.log('macos:', macos);
 					// console.log('labels:', labels);
 
-					// var ctx = canvas.getContext('2d');
-					// var config = {
-					// 	type: 'line',
-					// 	data: {
-					// 		labels: labels,
-					// 		datasets: [{
-					// 			label: 'pas2js - macOS',
-					// 			data: macos,
-					// 			backgroundColor: 'rgba(0, 119, 204, 0.3)'
-					// 		},
-					// 		{
-					// 			label: 'pas2js - Windows',
-					// 			data: data,
-					// 			backgroundColor: 'rgba(204, 119, 0, 0.3)'
-					// 		},
-					// 		{
-					// 			label: 'pas2js - Linux',
-					// 			data: data,
-					// 			backgroundColor: 'rgba(119, 0, 204, 0.3)'
-					// 		}
-					// 		]
-					// 	}
-					// };
+					var ctx = canvas.getContext('2d');
+					var config = {
+						type: 'line',
+						data: {
+							labels: labels,
+							datasets: datasets
+						}
+					};
 
-					// var chart = new Chart(ctx, config);
+					var chart = new Chart(ctx, config);
 				}
 			};
 			request.send();
