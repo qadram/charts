@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function () {
+			const request = new XMLHttpRequest();
+			request.open("GET", "https://json.extendsclass.com/bin/75d252e814b3", true);
+			request.onreadystatechange = () => {
+				//alert(request.responseText);
+				var jsonfile = JSON.parse(request.responseText);
+				console.log('jsonfile:',jsonfile);
+				console.log(typeof(jsonfile));
+				if (request.responseText !== '') {
+					console.log(jsonfile);
+
+					var labels = jsonfile.jsonarray.map(function (e) {
+						return e.name;
+					});
+					var data = jsonfile.jsonarray.map(function (e) {
+						return e.age;
+					});
+
+					var ctx = canvas.getContext('2d');
+					var config = {
+						type: 'line',
+						data: {
+							labels: labels,
+							datasets: [{
+								label: 'Graph Line',
+								data: data,
+								backgroundColor: 'rgba(0, 119, 204, 0.3)'
+							}]
+						}
+					};
+
+					var chart = new Chart(ctx, config);
+				}
+			};
+			request.send();
+		}
+	</script>
+
+</head>
+
+<body>
+	<canvas id="canvas"></canvas>
+</body>
+
+</html>
