@@ -27,17 +27,20 @@
 
 
 					systems.forEach(system => {
-						// let systemdata = 
 						platforms.forEach(platform => {
 
 							var data = jsonfile.data.map(function (e) {
 								return e[system + "_" + platform];
 							});
 
+							let r = Math.random()*256;
+							let g = Math.random()*256;
+							let b = Math.random()*256;							
+
 							let dataset = {
 								label: `${system} - ${platform}`,
 								data: data,
-								backgroundColor: 'rgba(0, 119, 204, 0.3)'
+								backgroundColor: `rgba(${r}, ${g}, ${b}, 0.3)`
 							};
 
 							datasets.push(dataset);
