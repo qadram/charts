@@ -17,31 +17,32 @@
 					let systems = ["pas2js", "delphi2ts"];
 					let platforms = ["macos", "windows", "linux"];
 
-					let chartdata=[];
+					let chartdata = [];
 
-					var labels = jsonfile.data.map(function(e) {
-								return e.commit;
+					var labels = jsonfile.data.map(function (e) {
+						return e.commit;
+					});
+
+					console.log('labels:', labels);
+
+
+					systems.forEach(system => {
+						// let systemdata = 
+						platforms.forEach(platform => {
+
+							var data = jsonfile.data.map(function (e) {
+								return e[system + "_" + platform];
 							});
 
-					console.log('labels:',labels);
+							let dataset = {
+								label: `${system} - ${platform}`,
+								data: data,
+								backgroundColor: 'rgba(0, 119, 204, 0.3)'
+							};
 
-
-					// systems.forEach(system => {
-					// 	let systemdata = 
-					// 	platforms.forEach(platform => {
-
-					// 		var data = jsonfile.data.map(function (e) {
-					// 			return e[system + "_" + platform];
-					// 		});
-
-					// 		let {
-					// 			label: 'pas2js - macOS',
-					// 			data: macos,
-					// 			backgroundColor: 'rgba(0, 119, 204, 0.3)'
-					// 		}
-					// 	});
-					// 	chartdata=
-					// });
+							console.log('dataset:',dataset);
+						});
+					});
 
 					// var labels = jsonfile.jsonarray.map(function (e) {
 					// 	return e.name;
