@@ -28,31 +28,31 @@
 					
 					console.log('macos:',macos);
 
-					var ctx = canvas.getContext('2d');
-					var config = {
-						type: 'line',
-						data: {
-							labels: labels,
-							datasets: [{
-								label: 'pas2js - macOS',
-								data: macos,
-								backgroundColor: 'rgba(0, 119, 204, 0.3)'
-							},
-								  {
-								label: 'pas2js - Windows',
-								data: data,
-								backgroundColor: 'rgba(204, 119, 0, 0.3)'
-							},
-								   {
-								label: 'pas2js - Linux',
-								data: data,
-								backgroundColor: 'rgba(119, 0, 204, 0.3)'
-							}
-								  ]
-						}
-					};
+					// var ctx = canvas.getContext('2d');
+					// var config = {
+					// 	type: 'line',
+					// 	data: {
+					// 		labels: labels,
+					// 		datasets: [{
+					// 			label: 'pas2js - macOS',
+					// 			data: macos,
+					// 			backgroundColor: 'rgba(0, 119, 204, 0.3)'
+					// 		},
+					// 			  {
+					// 			label: 'pas2js - Windows',
+					// 			data: data,
+					// 			backgroundColor: 'rgba(204, 119, 0, 0.3)'
+					// 		},
+					// 			   {
+					// 			label: 'pas2js - Linux',
+					// 			data: data,
+					// 			backgroundColor: 'rgba(119, 0, 204, 0.3)'
+					// 		}
+					// 			  ]
+					// 	}
+					// };
 
-					var chart = new Chart(ctx, config);
+					// var chart = new Chart(ctx, config);
 				}
 			};
 			request.send();
