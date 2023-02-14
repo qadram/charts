@@ -1,4 +1,14 @@
 {
+   "pas2js":
+   {
+       "macos": [
+          { "version": "2.1.1",
+            "commit": "asdfasdfasdf",
+           "time": 4500.45
+          }],
+       "windows": [],
+      "linux":[]
+   },
    "jsonarray": [{
       "name": "Joe",
       "age": 12
