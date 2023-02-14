@@ -6,7 +6,7 @@
 	<script type="text/javascript">
 		window.onload = function () {
 			const request = new XMLHttpRequest();
-			request.open("GET", "https://json.extendsclass.com/bin/75d252e814b3", true);
+			request.open("GET", "https://raw.githubusercontent.com/qadram/charts/main/data.json", true);
 			request.onreadystatechange = () => {
 				//alert(request.responseText);
 				var jsonfile = JSON.parse(request.responseText);
