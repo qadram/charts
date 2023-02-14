@@ -1,26 +1,13 @@
 {
-   "pas2js":
-   {
-       "macos": [
-          { "version": "2.1.1",
-            "commit": "asdfasdfasdf",
-           "time": 4500.45
-          }],
-       "windows": [],
-      "linux":[]
-   },
-   "jsonarray": [{
-      "name": "Joe",
-      "age": 12
-   }, {
-      "name": "Tom",
-      "age": 14
-   },
-   {
-      "name": "Tom",
-      "age": 14
-   },{
-      "name": "Joe",
-      "age": 12
-   }]
+   "data": [
+      {
+         "commit": "asdfasdfasdf",
+         "pas2js_macos": 4500.45,
+         "pas2js_windows": 4200.45,
+         "pas2js_linux": 3200.45,
+         "delphi2ts_macos": 1500.45,
+         "delphi2ts_windows": 1200.45,
+         "delphi2ts_linux": 1200.45
+      }
+   ]
 }

@@ -10,23 +10,57 @@
 			request.onreadystatechange = () => {
 				//alert(request.responseText);
 				var jsonfile = JSON.parse(request.responseText);
-				console.log('jsonfile:',jsonfile);
-				console.log(typeof(jsonfile));
+				console.log('jsonfile:', jsonfile);
+				console.log(typeof (jsonfile));
 				if (request.responseText !== '') {
 					console.log(jsonfile);
+					let systems = ["pas2js", "delphi2ts"];
+					let platforms = ["macos", "windows", "linux"];
 
-					var labels = jsonfile.jsonarray.map(function (e) {
-						return e.name;
-					});
-					var data = jsonfile.jsonarray.map(function (e) {
-						return e.age;
-					});
-					
-					var macos = jsonfile.pas2js.macos.map(function (e) {
-						return e.time;
-					});
-					
-					console.log('macos:',macos);
+					let chartdata=[];
+
+					var labels = jsonfile.data.map(function(e) {
+								return e.commit;
+							});
+
+					console.log('labels:',labels);
+
+
+					// systems.forEach(system => {
+					// 	let systemdata = 
+					// 	platforms.forEach(platform => {
+
+					// 		var data = jsonfile.data.map(function (e) {
+					// 			return e[system + "_" + platform];
+					// 		});
+
+					// 		let {
+					// 			label: 'pas2js - macOS',
+					// 			data: macos,
+					// 			backgroundColor: 'rgba(0, 119, 204, 0.3)'
+					// 		}
+					// 	});
+					// 	chartdata=
+					// });
+
+					// var labels = jsonfile.jsonarray.map(function (e) {
+					// 	return e.name;
+					// });
+					// var data = jsonfile.jsonarray.map(function (e) {
+					// 	return e.age;
+					// });
+
+					// var macos = jsonfile.pas2js.macos.map(function (e) {
+					// 	return e.time;
+					// });
+
+					// var macos = jsonfile.pas2js.macos.map(function (e) {
+					// 	return e.time;
+					// });
+
+
+					// console.log('macos:', macos);
+					// console.log('labels:', labels);
 
 					// var ctx = canvas.getContext('2d');
 					// var config = {
@@ -38,17 +72,17 @@
 					// 			data: macos,
 					// 			backgroundColor: 'rgba(0, 119, 204, 0.3)'
 					// 		},
-					// 			  {
+					// 		{
 					// 			label: 'pas2js - Windows',
 					// 			data: data,
 					// 			backgroundColor: 'rgba(204, 119, 0, 0.3)'
 					// 		},
-					// 			   {
+					// 		{
 					// 			label: 'pas2js - Linux',
 					// 			data: data,
 					// 			backgroundColor: 'rgba(119, 0, 204, 0.3)'
 					// 		}
-					// 			  ]
+					// 		]
 					// 	}
 					// };
 
