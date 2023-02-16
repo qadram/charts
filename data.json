@@ -4,15 +4,10 @@
          "commit": "2e217b5ef7946071c89dac52ee4f01ffa5ad1b75",
          "pas2js_macos": 7422,
          "pas2js_windows": 6283,
-         "pas2js_linux": 4843,
+         "pas2js_linux": 4806,
          "delphi2ts_macos": 2371,
          "delphi2ts_windows": 2375,
          "delphi2ts_linux": 1856
-      },
-      {
-         "commit": "2e217b5ef7946071c89dac52ee4f01ffa5ad1b75",
-         "pas2js_linux": 4690,
-         "delphi2ts_linux": 1658
       }
    ]
 }
